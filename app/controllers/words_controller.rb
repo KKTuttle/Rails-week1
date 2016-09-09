@@ -6,6 +6,7 @@ class WordsController<ApplicationController
 
   def show
     @word = Word.find(params[:id])
+    # definitions
     render :show
   end
 
