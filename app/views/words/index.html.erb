@@ -1,6 +1,10 @@
 <h2>Words</h2>
 
 <ul>
-  <% words.each do |word| %>
-  <li><%= word.title %></li>
+  <% @words.each do |word| %>
+    <li><%= word.title %></li>
+  <%end%>
 </ul>
+
+
+<%= link_to "Create a new word", new_word_path %>

@@ -1,0 +1,9 @@
+<%= render "layouts/errors", :object => @word %>
+
+<%=form_for @word do |f| %>
+  <%= f.label :img, "Img" %>
+  <%= f.text_field :img %>
+  <%= f.label :title, "Word" %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<%end%>

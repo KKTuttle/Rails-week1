@@ -5,26 +5,27 @@ class WordsController<ApplicationController
   end
 
   def show
-    @list = List.find(params[:id])
+    @word = Word.find(params[:id])
     render :show
   end
 
-  def 
-
+  def new
+    @word = Word.new
+    render :new
   end
 
-  def
-
+  def create
+    @word = Word.new(word_params)
+    if @word.save
+      flash[:notice] = "Word successfully added!"
+      redirect_to words_path
+    else
+      render :new
+    end
   end
 
-  def
-
+private
+  def word_params
+    params.require(:word).permit(:img, :title)
   end
-
-  def
-
-  end
-
-  def
-
-  end
+end
