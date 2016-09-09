@@ -1,1 +1,8 @@
-<h2><%=@definition.content%></h2>
+<h2><%=@definition.content%><%= link_to "Edit", edit_word_definition_path(@word, @definition) %></h2>
+
+
+
+<%= link_to "Delete definition", word_definition_path(@word, @definition), :data => {:confirm => "You sure?",                             :method => "delete"} %>
+<%= link_to "Return to word", word_path(@definition) %>
+
+<%= link_to "Return to list of words", words_path %>

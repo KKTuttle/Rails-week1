@@ -12,9 +12,10 @@
   <%end%>
 
 
+
 <%= link_to "Add a new definition", new_word_definition_path(@word) %>
 <%= link_to "Edit", edit_word_path %>
-<%= link_to "Delete", word_path(@word), :data => {:confirm => "You sure?",                             :method => "delete"} %>
+<%= link_to "Delete", word_path(@word), :data => {:confirm => "You sure?", :method => "delete"} %>
 
 <hr>
 <%= link_to "Return to list of words", words_path %>
