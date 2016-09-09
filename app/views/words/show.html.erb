@@ -12,10 +12,10 @@
   <%end%>
 
 
-
 <%= link_to "Add a new definition", new_word_definition_path(@word) %>
-<%= link_to "Edit", edit_word_path %>
-<%= link_to "Delete", word_path(@word), :data => {:confirm => "You sure?", :method => "delete"} %>
-
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-default"><%= link_to "Edit", edit_word_path %></button>
+  <button type="button" class="btn btn-default"><%= link_to "Delete", word_path(@word), :data => {:confirm => "You sure?", :method => "delete"} %></button>
+</div>
 <hr>
 <%= link_to "Return to list of words", words_path %>
