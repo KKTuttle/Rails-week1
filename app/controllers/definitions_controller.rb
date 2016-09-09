@@ -22,6 +22,31 @@ class DefinitionsController<ApplicationController
     end
   end
 
+  def edit
+    @word = Word.find(params[:word_id])
+    @definition = Definition.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @word = Word.find(params[:word_id])
+    @definition = Definition.find(params[:id])
+
+    if @definition.update(definition_params)
+      flash[:notice] = "Definition successfully editted"
+      redirect_to word_path(@word)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @word = Word.find(params[:word_id])
+    @definition = Definition.find(params[:id])
+    @definition.destroy
+    flash[:notice] = "Definition successfully deleted"
+    redirect_to word_path(@word)
+  end
 
 private
   def definition_params

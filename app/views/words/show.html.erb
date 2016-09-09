@@ -6,12 +6,12 @@
   <h3>Definitions listed below</h3>
   <ol>
     <% @word.definitions.each do |definition| %>
-      <li>definition.content </li>
+      <li> <%=link_to definition.content, word_definition_path(@word, definition) %></li>
     <%end%>
   </ol>
   <%end%>
 
-  
+
 <%= link_to "Add a new definition", new_word_definition_path(@word) %>
 <%= link_to "Edit", edit_word_path %>
 <%= link_to "Delete", word_path(@word), :data => {:confirm => "You sure?",                             :method => "delete"} %>
