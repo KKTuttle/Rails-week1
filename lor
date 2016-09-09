@@ -1,0 +1,32 @@
+.F..FF...
+
+Failures:
+
+  1) editting a definition process edits a definition
+     Failure/Error: expect(page).to have_content 'A Hash is a dictionary-like collection of unique keys and their values.'
+       expected to find text "A Hash is a dictionary-like collection of unique keys and their values." in "Edit definition Meaning/Definition Return to word Return to list of words"
+     # ./spec/features/definition_pages_spec.rb:33:in `block (2 levels) in <top (required)>'
+
+  2) editting a word process edits a new word
+     Failure/Error: click_on 'Edit'
+
+     Capybara::Ambiguous:
+       Ambiguous match, found 2 elements matching link or button "Edit"
+     # ./spec/features/word_pages_spec.rb:22:in `block (2 levels) in <top (required)>'
+
+  3) deleting a word process deletes a new word
+     Failure/Error: click_on 'Delete'
+
+     Capybara::Ambiguous:
+       Ambiguous match, found 2 elements matching link or button "Delete"
+     # ./spec/features/word_pages_spec.rb:38:in `block (2 levels) in <top (required)>'
+
+Finished in 9.65 seconds (files took 1 minute 5.88 seconds to load)
+9 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/features/definition_pages_spec.rb:19 # editting a definition process edits a definition
+rspec ./spec/features/word_pages_spec.rb:15 # editting a word process edits a new word
+rspec ./spec/features/word_pages_spec.rb:31 # deleting a word process deletes a new word
+
