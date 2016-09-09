@@ -24,6 +24,21 @@ class WordsController<ApplicationController
     end
   end
 
+  def edit
+    @word = Word.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @word = Word.find(params[:id])
+    if @word.update(word_params)
+      flash[:notice] = "Word successfully editted!"
+      redirect_to words_path
+    else
+      render :edit
+    end
+  end
+
 private
   def word_params
     params.require(:word).permit(:img, :title)
