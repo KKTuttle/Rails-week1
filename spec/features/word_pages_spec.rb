@@ -19,7 +19,7 @@ describe "editting a word process" do
     fill_in 'Word', :with => 'Ruby Hash'
     click_on 'Create Word'
     click_on 'Ruby Hash'
-    click_on 'Edit'
+    click_link 'Edit'
     fill_in 'Img', :with => 'url'
     fill_in 'Word', :with => 'Hash in Ruby'
     click_on 'Update Word'
@@ -35,7 +35,7 @@ describe "deleting a word process" do
     fill_in 'Word', :with => 'Ruby Hash'
     click_on 'Create Word'
     click_on 'Ruby Hash'
-    click_on 'Delete'
+    click_link 'Delete'
 
     expect(page).not_to have_content 'Ruby Hash'
   end

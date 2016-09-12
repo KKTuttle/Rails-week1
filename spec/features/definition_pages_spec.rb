@@ -29,6 +29,7 @@ describe "editting a definition process" do
     click_on 'Ruby hash is...'
     click_on 'Edit'
     fill_in 'Meaning/Definition', :with => 'A Hash is a dictionary-like collection of unique keys and their values.'
+    click_on 'Update Definition'
 
     expect(page).to have_content 'A Hash is a dictionary-like collection of unique keys and their values.'
   end
