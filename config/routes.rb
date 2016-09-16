@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-   root :to => 'words#index'
-  resources :words do
-    resources :definitions
+  devise_for :users
+
+  resources :users do
+    resources :words do
+      resources :definitions
+    end
   end
+
+  root :to => 'home#index'
+  get '/user/profile' => "users/profile"
 end
