@@ -1,6 +1,6 @@
 <%= render "layouts/errors", :object => @word %>
 
-<%=form_for [current_user, @word] do |f| %>
+<%=form_for [@user, @word] do |f| %>
   <%= f.label :img, "Img" %>
   <%= f.text_field :img %>
   <%= f.label :title, "Word" %>

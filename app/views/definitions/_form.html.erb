@@ -1,6 +1,6 @@
 <%= render "layouts/errors", :object => @definition %>
 
-<%=form_for [@word, @definition] do |f| %>
+<%=form_for [@user, @word, @definition] do |f| %>
   <%= f.label :content, "Meaning/Definition" %>
   <%= f.text_field :content %>
   <%= f.submit %>

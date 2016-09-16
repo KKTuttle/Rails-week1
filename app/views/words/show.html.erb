@@ -6,16 +6,15 @@
   <h3>Definitions listed below</h3>
   <ol>
     <% @word.definitions.each do |definition| %>
-      <li> <%=link_to definition.content, word_definition_path(@word, definition) %></li>
+      <li> <%=link_to definition.content, user_word_definition_path(@user, @word, definition) %></li>
     <%end%>
   </ol>
   <%end%>
 
-
-<%= link_to "Add a new definition", new_word_definition_path(@word) %>
+<%= link_to "Add a new definition", new_user_word_definition_path(@user, @word) %>
 <div class="btn-group" role="group">
-  <button type="button" class="btn btn-default"><%= link_to "Edit", edit_word_path %></button>
-  <button type="button" class="btn btn-default"><%= link_to "Delete", word_path(@word), :data => {:confirm => "You sure?", :method => "delete"} %></button>
+  <button type="button" class="btn btn-default"><%= link_to "Edit", edit_user_word_path %></button>
+  <button type="button" class="btn btn-default"><%= link_to "Delete", user_word_path(@word), :data => {:confirm => "You sure?", :method => "delete"} %></button>
 </div>
 <hr>
 <%= link_to "Return to list of words", user_words_path(current_user) %>

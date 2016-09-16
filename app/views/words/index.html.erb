@@ -2,6 +2,6 @@
 
 <ul>
   <% @words.each do |word| %>
-    <li><%=word.title %></li>
+    <li><%= link_to word.title, user_word_path(@user, word) %></li>
   <%end%>
 </ul>

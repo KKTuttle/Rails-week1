@@ -1,5 +1,5 @@
 <h2>Edit definition</h2>
 <%= render 'form' %>
 
-<%= link_to "Return to word", word_path(@word) %>
+<%= link_to "Return to word", user_word_path(@user, @word) %>
 <%= link_to "Return to list of words", user_words_path(current_user) %>

@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
   root :to => 'home#index'
-  get '/user/profile' => "users/profile"
+  get '/user/profile' => "users/show"
 end
