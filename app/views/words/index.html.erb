@@ -2,9 +2,6 @@
 
 <ul>
   <% @words.each do |word| %>
-    <li><%= link_to word.title, word_path(word) %></li>
+    <li><%=word.title %></li>
   <%end%>
 </ul>
-
-
-<button class = 'btn-lg btn btn-warning'><%= link_to "Create a new word", new_word_path %></button>

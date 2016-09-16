@@ -18,4 +18,4 @@
   <button type="button" class="btn btn-default"><%= link_to "Delete", word_path(@word), :data => {:confirm => "You sure?", :method => "delete"} %></button>
 </div>
 <hr>
-<%= link_to "Return to list of words", words_path %>
+<%= link_to "Return to list of words", user_words_path(current_user) %>

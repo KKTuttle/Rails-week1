@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  # before_action :authenticate_user!
+
   has_many :words
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

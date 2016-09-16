@@ -1,4 +1,6 @@
-class UsersController<ApplicationController
+class UsersController < ApplicationController
+
+
   def profile
     render :profile
   end
