@@ -18,7 +18,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Test <span class="sr-only">(current)</span></a></li>
+            <!-- <li class="active"><a href="#">Test <span class="sr-only">(current)</span></a></li> -->
             <li><%= link_to "Home", root_path %></li>
             <% if user_signed_in? %>
               <li><%= link_to 'Words', user_words_path(current_user)%></li>
@@ -37,7 +37,7 @@
               <%end%>
             </ul>
             <% if user_signed_in? %>
-              <p class="navbar-text navbar-right">Signed in as <%= link_to current_user.username, user_profile_path(current_user)%></p>
+              <p class="navbar-text navbar-right">Signed in as <%= link_to current_user.username, user_path(current_user)%></p>
             <%end%>
         </div>
       </div>

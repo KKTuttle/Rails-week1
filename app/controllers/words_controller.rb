@@ -47,7 +47,7 @@ class WordsController<ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:user_id])
+    # @user = User.find(params[:user_id])
     @word = Word.find(params[:id])
     @word.destroy
     flash[:notice] = "Word successfully deleted!"
