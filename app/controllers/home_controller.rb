@@ -3,8 +3,8 @@ class HomeController<ApplicationController
 
   end
 #
-# private
-#   def sign_up_params
-#     params.require(:user).permit(:email, :avatar, :password, :password_confirmation)
-#   end
+private
+  def sign_up_params
+    params.require(:user).permit(:email, :avatar, :password, :password_confirmation)
+  end
 end

@@ -4,14 +4,14 @@
 <img src="<%= @word.img %>" alt='picture of <%=@word.title %>' />
 <% if @word.definitions.any? %>
   <h3>Definitions listed below</h3>
-  <ol>
+  <ol id ="results">
     <% @word.definitions.each do |definition| %>
-      <li> <%=link_to definition.content, user_word_definition_path(@user, @word, definition) %></li>
+      <%= render "definitions/definition", definition: definition %>
     <%end%>
   </ol>
   <%end%>
 
-<%= link_to "Add a new definition", new_user_word_definition_path(@user, @word) %>
+<%= link_to "Add a new definition", new_user_word_definition_path(@user, @word), remote: true, id: "new_definition_link"%>
 <div class="btn-group" role="group">
   <button type="button" class="btn btn-default"><%= link_to "Edit", edit_user_word_path %></button>
   <button type="button" class="btn btn-default"><%= link_to "Delete", user_word_path(@word), :data => {:confirm => "You sure?", :method => "delete"} %></button>

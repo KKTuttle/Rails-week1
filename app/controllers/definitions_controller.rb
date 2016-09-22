@@ -15,12 +15,16 @@ class DefinitionsController<ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-
     @word = Word.find(params[:word_id])
     @definition = @word.definitions.new(definition_params)
+
     if @definition.save
       flash[:notice] = "Definition successfully added!"
-      redirect_to user_words_path(@user)
+      respond_to do |format|
+        format.html { redirect_to user_word_path(@user) }
+        format.js
+      end
+      # redirect_to user_words_path(@user)
     else
       render :new
     end

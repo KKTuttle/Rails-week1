@@ -18,7 +18,6 @@ class WordsController<ApplicationController
   end
 
   def create
-
     @word = Word.new(word_params)
     @word.user = User.find(params[:user_id])
     if @word.save
