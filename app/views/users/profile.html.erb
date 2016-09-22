@@ -1,2 +1,15 @@
 <h2>Username : <%= current_user.username %></h2>
 <h2>Email : <%= current_user.email %></h2>
+
+  <% if @user.avatar.exists? %>
+    <%= image_tag @user.avatar.url(:medium), class: "img-circle" %>
+  <% else %>
+  <h3>You have not uploaded a photo, let's change that</h3>
+    <%= form_for @user do |f| %>
+      <div class="field">
+        <%= f.label :avatar %><br />
+        <%= f.file_field :avatar %>
+        <%= f.submit "Add Image" %>
+      </div>
+    <% end %>
+  <% end %>
