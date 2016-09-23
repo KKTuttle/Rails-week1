@@ -98,13 +98,24 @@
 
 
       <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>...</p>
+        <!-- <div class="first_half" style= "float:left"> -->
+          <h1>Hello, world!</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+        <!-- </div>
+        <div class="second_half" style= "float:right">
+
+        </div> -->
+
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
       </div>
-      <%= flash[:alert] %>
-      <%= flash[:notice] %>
-      <%= yield %>
+      <div class="container_under_jumbotrone">
+        <%= flash[:alert] %>
+        <%= flash[:notice] %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

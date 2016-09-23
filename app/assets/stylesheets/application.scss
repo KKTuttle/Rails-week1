@@ -21,3 +21,17 @@ body {
   width: 20px;
   height: 20px;
 }
+
+.jumbotron {
+  // background: url('app/assets/images/books_pc.jpg')
+  background: image-url('books_pc.jpg');
+  // background-size:80% 80%;
+
+  background-size: auto;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: top;
+}
+
+.container_under_jumbotrone {
+}
