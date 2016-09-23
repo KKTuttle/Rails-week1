@@ -1,4 +1,5 @@
 class DefinitionsController<ApplicationController
+
   def show
     @user = User.find(params[:user_id])
     @word = Word.find(params[:word_id])
