@@ -1,2 +1,23 @@
+// @import 'https://fonts.googleapis.com/css?family=Miniver';
+@import 'https://fonts.googleapis.com/css?family=Sunshiney';
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  // font-family: 'Miniver', cursive;
+  font-family: 'Sunshiney', cursive;
+  font-size: 20px;
+}
+.navbar, .nav, .navbar-nav, .navbar-right {
+  font-size: 20px;
+}
+.container-fluid {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.image_logo {
+  width: 20px;
+  height: 20px;
+}

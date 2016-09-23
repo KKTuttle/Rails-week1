@@ -13,3 +13,7 @@
       </div>
     <% end %>
   <% end %>
+
+<%= link_to "Edit Profile", edit_user_registration_path(@user)%>
+
+<p>Unhappy? Cancel my account <%= button_to "Cancel my account", registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete %></p>
