@@ -1,32 +1,26 @@
-.F..FF...
+.FF..........
 
 Failures:
 
-  1) editting a definition process edits a definition
-     Failure/Error: expect(page).to have_content 'A Hash is a dictionary-like collection of unique keys and their values.'
-       expected to find text "A Hash is a dictionary-like collection of unique keys and their values." in "Edit definition Meaning/Definition Return to word Return to list of words"
-     # ./spec/features/definition_pages_spec.rb:33:in `block (2 levels) in <top (required)>'
+  1) logging in a user logs in a user
+     Failure/Error: fill_in "Email", :with => 'kk@kk'
 
-  2) editting a word process edits a new word
-     Failure/Error: click_on 'Edit'
+     Capybara::ElementNotFound:
+       Unable to find field "Email"
+     # ./spec/features/user_pages_spec.rb:20:in `block (2 levels) in <top (required)>'
 
-     Capybara::Ambiguous:
-       Ambiguous match, found 2 elements matching link or button "Edit"
-     # ./spec/features/word_pages_spec.rb:22:in `block (2 levels) in <top (required)>'
+  2) logging out a user logs out a user
+     Failure/Error: fill_in "Email", :with => 'kk@kk'
 
-  3) deleting a word process deletes a new word
-     Failure/Error: click_on 'Delete'
+     Capybara::ElementNotFound:
+       Unable to find field "Email"
+     # ./spec/features/user_pages_spec.rb:32:in `block (2 levels) in <top (required)>'
 
-     Capybara::Ambiguous:
-       Ambiguous match, found 2 elements matching link or button "Delete"
-     # ./spec/features/word_pages_spec.rb:38:in `block (2 levels) in <top (required)>'
-
-Finished in 9.65 seconds (files took 1 minute 5.88 seconds to load)
-9 examples, 3 failures
+Finished in 36.9 seconds (files took 1 minute 27.68 seconds to load)
+13 examples, 2 failures
 
 Failed examples:
 
-rspec ./spec/features/definition_pages_spec.rb:19 # editting a definition process edits a definition
-rspec ./spec/features/word_pages_spec.rb:15 # editting a word process edits a new word
-rspec ./spec/features/word_pages_spec.rb:31 # deleting a word process deletes a new word
+rspec ./spec/features/user_pages_spec.rb:16 # logging in a user logs in a user
+rspec ./spec/features/user_pages_spec.rb:28 # logging out a user logs out a user
 

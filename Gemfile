@@ -40,6 +40,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry'
   gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'launchy'
   gem 'simplecov', require: false
   gem 'factory_girl_rails'
