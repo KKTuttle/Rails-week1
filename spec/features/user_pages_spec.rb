@@ -32,10 +32,11 @@ describe "editting user's username" do
     fill_in "Username", :with => 'KK'
     fill_in "Password", :with => "123456"
     click_on "Log in"
-    click_link "Signed in as KK"
+    click_link "KK"
     click_link "Edit Profile"
     fill_in "Username", :with => 'kktuttle'
     fill_in "Current password", :with => '123456'
+    click_button "Update"
     expect(page).to have_content('Signed in as kktuttle')
   end
 end
@@ -48,8 +49,8 @@ describe "logging out a user" do
     fill_in "Username", :with => 'KK'
     fill_in "Password", :with => "123456"
     click_button "Log in"
+    # page.save_screenshot
     click_link "Sign Out"
-    open_and_save_screenshot
     expect(page).to have_content('Signed out successfully.')
   end
 end

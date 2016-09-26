@@ -45,6 +45,8 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'factory_girl_rails'
   gem "letter_opener"
+  gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 group :development do

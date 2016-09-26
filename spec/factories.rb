@@ -10,4 +10,9 @@ FactoryGirl.define do
     title("Dog")
     user
   end
+
+  # factory :definition do
+  #   content("animal")
+  #   definition
+  # end
 end

@@ -2,14 +2,14 @@
 
 
 <img src="<%= @word.img %>" alt='picture of <%=@word.title %>' />
-<% if @word.definitions.any? %>
   <h3>Definitions listed below</h3>
   <ol id ="results">
-    <% @word.definitions.each do |definition| %>
-      <%= render "definitions/definition", definition: definition %>
+    <% if @word.definitions.any? %>
+      <% @word.definitions.each do |definition| %>
+        <%= render "definitions/definition", definition: definition %>
+      <%end%>
     <%end%>
   </ol>
-  <%end%>
 
 <%= link_to "Add a new definition", new_user_word_definition_path(@user, @word), remote: true, id: "new_definition_link"%>
 <div class="btn-group" role="group">
