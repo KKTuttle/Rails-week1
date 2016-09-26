@@ -47,6 +47,7 @@ group :development, :test do
   gem "letter_opener"
   gem 'poltergeist'
   gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do

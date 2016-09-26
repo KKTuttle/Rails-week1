@@ -41,6 +41,21 @@ describe "edditing saved words" do
   end
 end
 
+# describe "adding new def" do
+#   it "adding new def", js: true do
+#     word = FactoryGirl.create(:word)
+#     user =User.find(word.user_id)
+#     login_as(user, :scope => :user)
+#     visit root_path
+#     click_on "Words"
+#     click_link "Dog"
+#     click_link "Add a new definition"
+#     fill_in "Meaning/Definition", :with => 'animal'
+#     click_button "Save"
+#     expect(page).to have_content "animal"
+#   end
+# end
+
 # describe "deleting saved words" do
 #   it "deletes saved words" do
 #     word = FactoryGirl.create(:word)

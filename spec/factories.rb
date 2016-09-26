@@ -11,8 +11,8 @@ FactoryGirl.define do
     user
   end
 
-  # factory :definition do
-  #   content("animal")
-  #   definition
-  # end
+  factory :definition do
+    content("animal")
+    word
+  end
 end
