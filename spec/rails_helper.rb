@@ -6,7 +6,6 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
-
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 # Add additional requires below this line. Rails is not loaded until this point!
@@ -38,7 +37,7 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   # before = true
-  config.use_transactional_fixtures = false
+  #config.use_transactional_fixtures = false
 
    config.before(:suite) do
      DatabaseCleaner.strategy = :truncation

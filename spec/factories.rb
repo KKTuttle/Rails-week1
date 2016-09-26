@@ -6,7 +6,7 @@ FactoryGirl.define do
   end
 
   factory :word do
-    img("url")
+    img("testest")
     title("Dog")
     user
   end

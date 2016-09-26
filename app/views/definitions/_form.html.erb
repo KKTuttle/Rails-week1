@@ -2,6 +2,6 @@
 
 <%=form_for [@user, @word, @definition], remote: true, id: "add_new_definition" do |f| %>
   <%= f.label :content, "Meaning/Definition" %>
-  <%= f.text_field :content %>
+  <%= f.text_field :content, title: "meaning_def" %>
   <%= f.submit "Save"%>
 <%end%>

@@ -2,6 +2,7 @@
 require 'factory_girl'
 require 'paperclip/matchers'
 require 'simplecov'
+require 'wait_for_ajax'
 
 SimpleCov.start
 
