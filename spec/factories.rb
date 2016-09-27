@@ -6,7 +6,7 @@ FactoryGirl.define do
   end
 
   factory :word do
-    img("testest")
+    img("http://blog.bestfriendspetcare.com/wp-content/themes/best-friends/images/img_dog_right-col-top.png")
     title("Dog")
     user
   end
