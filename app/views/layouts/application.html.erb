@@ -23,7 +23,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <%= link_to "WebSiteName", root_path, class:"navbar-brand"%>
+            <%= link_to "Tech Flashcards", root_path, class:"navbar-brand"%>
           </div>
 
           <div class="collapse navbar-collapse" id="myNavbar">
@@ -38,7 +38,7 @@
                 </ul>
               </li> -->
               <% if user_signed_in? %>
-                <li><a href="#">Dictionary</a></li>
+                <!-- <li><a href="#">Dictionary</a></li> -->
                 <li><%= link_to ' My Words', user_words_path(current_user)%></li>
                 <li><%= link_to 'Add a new word', new_user_word_path(current_user)%></li>
               <%end%>
@@ -74,17 +74,11 @@
       </nav>
 
       <div class="jumbotron">
-        <!-- <div class="first_half" style= "float:left"> -->
-          <h1>Hello, world!</h1>
+        <h1>Hello, world!</h1>
           <br>
           <br>
           <br>
           <br>
-        <!-- </div>
-        <div class="second_half" style= "float:right">
-
-        </div> -->
-
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
       </div>
       <div class="container_under_jumbotrone">
