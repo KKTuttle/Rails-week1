@@ -29,6 +29,12 @@ _This web application allows user to save different words and then add definitio
   * rails db:test:prepare
   * rails s  
 
+  This project currently uses Facebook for authentication. Rename example.env to '.env' in the project and set the Facebook API authentication:
+
+  - FACEBOOK_ID
+  - FACEBOOK_SECRET
+  - FACEBOOK_CALLBACK_URL
+
 ## Known Bugs
 _none_
 
@@ -45,6 +51,8 @@ _Contact by email: katka.karolcikova@gmail.com_
 * Sass
 * Ruby on Rails
 * ActiveRecord
+* Devise
+* Facebook API
 
 ### License
 
@@ -57,22 +65,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-* Ruby version
-  Rails 5.0.0.1
-* System dependencies
-
-* Configuration
-
-* Database creation
-  rails db:create
-
-* Database initialization
-  rails db:migrate
-  raild db:test:prepare
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
