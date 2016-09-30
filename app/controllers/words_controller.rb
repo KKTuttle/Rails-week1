@@ -22,7 +22,7 @@ class WordsController<ApplicationController
     @word.user = User.find(params[:user_id])
     if @word.save
       flash[:notice] = "Word successfully added!"
-      redirect_to root_path
+      redirect_to user_words_path(current_user)
     else
       render :new
     end
@@ -39,7 +39,7 @@ class WordsController<ApplicationController
     @word = current_user.words.find(params[:id])
     if @word.update(word_params)
       flash[:notice] = "Word successfully editted!"
-      redirect_to root_path
+      redirect_to user_word_path(current_user, @word)
     else
       render :edit
     end
@@ -50,7 +50,7 @@ class WordsController<ApplicationController
     @word = Word.find(params[:id])
     @word.destroy
     flash[:notice] = "Word successfully deleted!"
-    redirect_to root_path
+    redirect_to user_words_path(current_user)
   end
 
 private
