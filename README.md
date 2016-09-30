@@ -29,7 +29,7 @@ _This web application allows user to save different words and then add definitio
   * rails db:test:prepare
   * rails s  
 
-  This project currently uses Facebook for authentication. Rename example.env to '.env' in the project and set the Facebook API authentication:
+  This project currently uses Facebook for authentication. Rename example.env to '.env' in the project and set the Facebook API authentication after visiting https://developers.facebook.com/:
 
   - FACEBOOK_ID
   - FACEBOOK_SECRET
